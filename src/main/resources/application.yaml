@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: timemanager
+    # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5433/timemanager?createDatabaseIfNotExist=true
+    username: postgres
+    password: 123456
+  # JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
+
+#JWT properties
+jwt:
+  clientId: web-time-manager
+  client-secret: senha-web
+  accessTokenValidititySeconds: 100
+  refreshTokenValiditySeconds: 1000
