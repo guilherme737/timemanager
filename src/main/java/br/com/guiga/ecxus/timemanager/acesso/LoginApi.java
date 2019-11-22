@@ -1,6 +1,5 @@
 package br.com.guiga.ecxus.timemanager.acesso;
 
-import br.com.guiga.ecxus.infra.entity.Usuario;
 import br.com.guiga.ecxus.timemanager.usuario.UsuarioRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.annotation.Validated;
@@ -21,12 +20,6 @@ public class LoginApi {
     public LoginApi(UsuarioRepository repository, PasswordEncoder passwordEncoder) {
         this.repository = repository;
         this.passwordEncoder = passwordEncoder;
-    }
-
-    @PostMapping
-    public Usuario novo(@RequestParam final String nome, @RequestParam final String login, @RequestParam final String senha) {
-        Usuario u = new Usuario(nome, login, passwordEncoder.encode(senha), Usuario.Papel.USUARIO);
-        return repository.save(u);
     }
 
     @PostMapping("/validarLogin")

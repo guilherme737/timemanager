@@ -57,8 +57,8 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/api/registro/**").permitAll()
-                .antMatchers("/api/glee/**").hasAnyAuthority("ADMIN", "USUARIO")
-                .antMatchers("/api/users/**").hasAuthority("ADMIN")
+                .antMatchers("/api/ponto/**").hasAnyAuthority("ADMIN", "USUARIO")
+                .antMatchers("/api/usuario/**").hasAuthority("ADMIN")
                 .antMatchers("/api/**").authenticated()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(customAuthenticationEntryPoint).accessDeniedHandler(new CustomAccessDeniedHandler());

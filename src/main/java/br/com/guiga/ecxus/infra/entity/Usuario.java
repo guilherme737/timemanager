@@ -35,10 +35,11 @@ public class Usuario {
 
     }
 
-    public Usuario(String nome, String login, String senha, Papel papel) {
+    public Usuario(String nome, String login, String senha, Integer horasDeTrabalhoPreferidasPorDia, Papel papel) {
         this.nome = nome;
         this.login = login;
         this.senha = senha;
+        this.horasDeTrabalhoPreferidasPorDia = horasDeTrabalhoPreferidasPorDia;
         this.papel = papel;
     }
 
