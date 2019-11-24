@@ -1,5 +1,7 @@
 package br.com.guiga.ecxus.timemanager.usuario;
 
+import br.com.guiga.ecxus.infra.entity.Usuario;
+
 public class UsuarioDto {
 
     private String nome;
@@ -9,6 +11,8 @@ public class UsuarioDto {
     private String senha;
 
     private Integer horasDeTrabalhoPreferidasPorDia;
+
+    private Usuario.Permissao permissao;
 
     public String getNome() {
         return nome;
@@ -40,5 +44,13 @@ public class UsuarioDto {
 
     public void setHorasDeTrabalhoPreferidasPorDia(Integer horasDeTrabalhoPreferidasPorDia) {
         this.horasDeTrabalhoPreferidasPorDia = horasDeTrabalhoPreferidasPorDia;
+    }
+
+    public Usuario.Permissao getPermissao() {
+        return permissao;
+    }
+
+    public void setPermissao(Usuario.Permissao permissao) {
+        this.permissao = permissao;
     }
 }

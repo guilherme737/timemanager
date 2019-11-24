@@ -23,7 +23,7 @@ public class UserService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
         Usuario usuario = repository.findByLogin(login).orElseThrow(() -> new RuntimeException("Usuário não encontrado: " + login));
-        GrantedAuthority authority = new SimpleGrantedAuthority(usuario.getPapel().name());
+        GrantedAuthority authority = new SimpleGrantedAuthority(usuario.getPermissao().name());
         return new org.springframework.security.core.userdetails.User(usuario.getLogin(), usuario.getSenha(), Arrays.asList(authority));
     }
 }

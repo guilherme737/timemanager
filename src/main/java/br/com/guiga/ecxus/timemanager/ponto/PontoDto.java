@@ -10,6 +10,8 @@ public class PontoDto {
 
     private Long codigoDoUsuario;
 
+    private String nomeDoUsuario;
+
     public LocalDate getData() {
         return data;
     }
@@ -32,5 +34,13 @@ public class PontoDto {
 
     public void setCodigoDoUsuario(Long codigoDoUsuario) {
         this.codigoDoUsuario = codigoDoUsuario;
+    }
+
+    public String getNomeDoUsuario() {
+        return nomeDoUsuario;
+    }
+
+    public void setNomeDoUsuario(String nomeDoUsuario) {
+        this.nomeDoUsuario = nomeDoUsuario;
     }
 }

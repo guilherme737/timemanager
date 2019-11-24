@@ -2,11 +2,11 @@ databaseChangeLog:
   - changeset:
       id: 1
       author: guilherme
-#  - changeSet:
-#      id: megaadm-app-20160530-samuelgrigolato-01
-#      author: samuel.grigolato
-#      changes:
-#        - sqlFile:
-#            encoding: utf8
-#            path: sqls/megaadm-app-20160530-samuelgrigolato-01.sql
-#            relativeToChangelogFile: true
+  - changeSet:
+      id: cria-tabelas-e-configuracao-inicial
+      author: guilherme-mendes
+      changes:
+        - sqlFile:
+            encoding: utf8
+            path: sqls/cria-tabelas-e-configuracao-inicial.sql
+            relativeToChangelogFile: true

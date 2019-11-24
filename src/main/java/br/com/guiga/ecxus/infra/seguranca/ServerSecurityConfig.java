@@ -56,9 +56,9 @@ public class ServerSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                .antMatchers("/api/registro/**").permitAll()
-                .antMatchers("/api/ponto/**").hasAnyAuthority("ADMIN", "USUARIO")
-                .antMatchers("/api/usuario/**").hasAuthority("ADMIN")
+//                .antMatchers("/api/registro/**").permitAll()
+//                .antMatchers("/api/ponto/**").hasAnyAuthority("ADMIN", "USUARIO")
+//                .antMatchers("/api/usuario/**").hasAuthority("ADMIN")
                 .antMatchers("/api/**").authenticated()
                 .anyRequest().authenticated()
                 .and().exceptionHandling().authenticationEntryPoint(customAuthenticationEntryPoint).accessDeniedHandler(new CustomAccessDeniedHandler());

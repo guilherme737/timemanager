@@ -19,7 +19,7 @@ public class Ponto {
     private Integer horasTrabalhadas;
 
     @Column
-    private Boolean dentroDoLimiteDeHorasPreferido;
+        private Boolean dentroDoLimiteDeHorasPreferido;
 
     @ManyToOne
     private Usuario usuario;

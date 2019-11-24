@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 @Entity
 public class Usuario {
 
-    public enum Papel {USUARIO, GERENTE, ADMIN}
+    public enum Permissao {USUARIO, GERENTE, ADMIN}
 
     @Id
     @Column
@@ -29,18 +29,18 @@ public class Usuario {
     private Integer horasDeTrabalhoPreferidasPorDia;
 
     @Column
-    private Papel papel;
+    private Permissao permissao;
 
     public Usuario() {
 
     }
 
-    public Usuario(String nome, String login, String senha, Integer horasDeTrabalhoPreferidasPorDia, Papel papel) {
+    public Usuario(String nome, String login, String senha, Integer horasDeTrabalhoPreferidasPorDia, Permissao permissao) {
         this.nome = nome;
         this.login = login;
         this.senha = senha;
         this.horasDeTrabalhoPreferidasPorDia = horasDeTrabalhoPreferidasPorDia;
-        this.papel = papel;
+        this.permissao = permissao;
     }
 
     public Long getId() {
@@ -83,11 +83,11 @@ public class Usuario {
         this.horasDeTrabalhoPreferidasPorDia = horasDeTrabalhoPreferidasPorDia;
     }
 
-    public Papel getPapel() {
-        return papel;
+    public Permissao getPermissao() {
+        return permissao;
     }
 
-    public void setPapel(Papel papel) {
-        this.papel = papel;
+    public void setPermissao(Permissao permissao) {
+        this.permissao = permissao;
     }
 }
